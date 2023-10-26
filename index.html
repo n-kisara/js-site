@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>js-site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Sometype+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Js Site</h1>
+        <div class="hamburger" id="js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="header-nav" id="js-nav">
+            <ul class="header-nav_items">
+                <li class="header-nav_item"><a href="#photogallary">フォトギャラリー</a></li>
+                <li class="header-nav_item"><a href="#qa-list">〇〇といえば？</a></li>
+                <li class="header-nav_item"><a href="#omikuzi">おみくじ</a></li>
+                <li class="header-nav_item"><a href="#counter">カウンター</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div id="photogallary">
+                <div id="main_image" class="main_image"></div>
+                <div id="thumbnails" class="thumbnails"></div> 
+            </div>            
+            <div class="container">
+                <section class="qa-list" id="qa-list">
+                    <h2>〇〇といえば？</h2>
+                    <dl id="js-qa">
+                        <dt>チョコのお菓子といえば？</dt>
+                        <dd>カントリーマーム</dd>
+                        <dt>日本食といえば？</dt>
+                        <dd>お寿司</dd>
+                        <dt>日本のスポーツといえば？</dt>
+                        <dd>相撲</dd>
+                    </dl>
+                </section>
+                <section class="omikuzi" id="omikuzi">
+                    <h2>おみくじ</h2>
+                    <div class="omikuziArea">
+                        <div id="js-omikuziBox" class="omikuziBox">ここを<br/>押してね</div>
+                    </div>
+                </section>
+                <section class="counter" id="counter">
+                    <h2>カウンター</h2>
+                    <div class="counter_inner">
+                        <textarea id="main_text" cols="30" rows="10"></textarea>
+                        <p id="countWrap" class="countWrap">残り<span id="count">10</span>文字</p>                        
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="copyRight">&copy;nishikawa right All reserved .</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+@charset "utf-8";
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+body {
+    background-color: #eee;
+    font-family: 'Noto Sans JP','Sometype Mono', monospace,"Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* header */
+h1 {
+    color: #fff;
+    font-size: 18px;
+}
+
+header {
+    height: 40px;
+    background-color: rgb(229, 229, 19);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hamburger {
+    position: relative;
+    right: 20px;
+    z-index: 999;
+}
+
+.hamburger span{
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    position: absolute;
+}
+
+.hamburger span:nth-child(1) {
+    top: -8px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 0;
+}
+
+.hamburger span:nth-child(3) {
+    top: 8px;
+}
+
+.hamburger.active span:nth-child(1) {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    display: none;
+}
+
+.hamburger.active span:nth-child(3) {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.header-nav {
+    display: none;
+    transform: transiton .3 ease;
+
+}
+
+.header-nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(92, 81, 81, 0.8);
+}
+
+.header-nav_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.header-nav_item {
+    padding-bottom: 20px;
+}
+
+.header-nav_item > a {
+    color: #fff;
+}
+
+/* main */
+main {
+    padding-top: 40px;
+}
+
+section {
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* photogallary */
+.main_image img{
+    width: 100%;
+}
+
+.main_image p {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnails img {
+    width: 60px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+/* qa-list */
+h2 {
+    padding-bottom: 15px;
+    font-size: 16px;
+}
+
+#js-qa {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#js-qa dt {
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#js-qa dt::after {
+    content: '\f078';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+#js-qa dt.open::after {
+    content: '\f077';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: transition .3s ease;
+}
+
+#js-qa dt:last-of-type {
+    margin-bottom: 0;
+}
+
+#js-qa dt:last-of-type {
+    padding-top: 10px;
+}
+
+#js-qa dd{
+    display: none;
+    padding-bottom: 10px;
+}
+
+#js-qa dd:last-of-type {
+    padding-top: 10px;
+}
+
+/* omikuzi */
+.omikuziArea {
+    display: flex;
+    justify-content: center;
+}
+.omikuziBox {
+    text-align: center;
+    line-height: 1.6;
+    user-select: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: red;
+    color: #fff;
+}
+
+.counter_inner {
+    text-align: center;
+}
+
+.countWrap {
+    padding: 10px 0;
+}
+
+/* footer */
+.copyRight {
+  text-align: center;
+  padding-top: 5px;
+
+}
+
+@media screen and (min-width:767px) {
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  /* header */
+  h1 {
+    font-size: 25px;
+  }
+
+  header {
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .header-nav {
+    display: block;
+  }
+
+  .header-nav_items {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+    font-weight: bold;
+  }
+
+  .header-nav_item {
+    padding-right: 15px;
+    padding-bottom: 0;
+   }
+
+   /* main */
+    .thumbnails img {
+     width: 150px;
+    }
+
+   h2 {
+    font-size: 20px;
+    }
+
+    #js-qa {
+        cursor: pointer;
+        font-size: 16px;
+    }
+}

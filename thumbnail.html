@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Sometype+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="thumbnail.css">
+</head>
+<body>
+    <header>
+        <h1>Js Site</h1>
+        <div class="hamburger" id="js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="header-nav" id="js-nav">
+            <ul class="header-nav_items">
+                <li class="header-nav_item"><a href="#qa-list">〇〇といえば？</a></li>
+                <li class="header-nav_item"><a href="#omikuzi">おみくじ</a></li>
+                <li class="header-nav_item"><a href="">給食</a></li>
+                <li class="header-nav_item" target="_blank"><a href="thumbnail.html">サムネイル画像</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <section class="thumbnailImage">
+                    <div id="main_image" class="main_image"></div>
+                    <div id="thumbnails" class="thumbnails"></div> 
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="copyRight">&copy;nishikawa right All reserved .</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="thumbail.js"></script>
+</body>
+</html>

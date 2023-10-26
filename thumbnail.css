@@ -1,0 +1,21 @@
+@charset "utf-8";
+.container {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.main_image img{
+    width: 400px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnails img {
+    width: 200px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
