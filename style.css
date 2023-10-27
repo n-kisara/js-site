@@ -222,10 +222,23 @@ h2 {
 }
 
 /* footer */
+.pagetop {
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
 .copyRight {
   text-align: center;
   padding-top: 5px;
-
 }
 
 @media screen and (min-width:767px) {

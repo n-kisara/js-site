@@ -74,7 +74,6 @@ const omikuzi = () => {
     let random = Math.floor(Math.random() * fortune.length);
     omikuziArea.textContent = fortune[random];
 }
-
 omikuziArea.addEventListener('click',omikuzi);
 
 // カウンター
@@ -93,3 +92,24 @@ const keyUp = () => {
 }
 const mainText = document.getElementById('main_text');
 mainText.addEventListener('keyup',keyUp);
+
+//pagetop
+const pagetop = document.getElementById('js-pagetop');
+
+function pageUp() {
+    window.scroll({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+pagetop.addEventListener('click',pageUp);
+
+function scrollEvent() {
+    if(pageYOffset > 100) {
+        pagetop.style.opacity = "1";
+    } else {
+        pagetop.style.opacity = "0";
+    }
+}
+
+window.addEventListener('scroll',scrollEvent);
